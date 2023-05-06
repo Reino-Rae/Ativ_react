@@ -1,0 +1,29 @@
+function Table({data}) {
+  return (
+    <table border='1'>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Usuário</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {data.map(pessoa => 
+        <>
+        <tr>
+          <th>{pessoa.id}</th>
+          <th>{pessoa.nome}</th>
+          <th>{pessoa.usuario}</th>
+          <th>{pessoa.email}</th>
+          </tr>
+          </>
+          )}
+      </tbody>
+    </table>
+  );
+}
+
+export default Table;
